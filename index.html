@@ -9,27 +9,38 @@
 </head>
 <body>
 
-    <div class="top-bar">
+   <header class="site-header">
+  <!-- Top Bar for Location & Quick Contacts -->
+  <div class="top-bar">
     <div class="container top-bar-content">
       <span>📍 Sitakhandi talav, Bhokar, Bachoti kamp, Maharashtra 431745</span>
       <div class="top-contacts">
-        <span>📞 +91 82082 19849</span>
-        <span>✉️ bookings@Ananddham.com</span>
+        <a href="tel:8208219849">📞 +91 82082 19849</a>
+        <a href="mailto:bookings@Ananddham.com">✉️ bookings@Ananddham.com</a>
       </div>
     </div>
   </div>
 
+  <!-- Main Navigation Bar -->
   <nav class="navbar">
     <div class="container nav-wrapper">
-      <a href="#" class="logo">Anand<span>धाम</span></a>
+      <!-- Logo + Name Brand Container -->
+      <a href="#home" class="logo-brand">
+        <img src="Images/Logo.png" alt="आनंदधाम Logo" class="nav-logo" />
+        <span class="brand-text">Anand<span>धाम</span></span>
+      </a>
+
+      <!-- Navigation Links -->
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About </a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#attractions">Attractions</a></li>
         <li><a href="#packages">Packages</a></li>
         <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#booking" class="nav-btn">Book Now</a></li>
-      </ul>
+        <li><a href="https://wa.me/918208219849?text=Hello%20Anand%20dham,%20I%20would%20like%20to%20book%20a%20tour." class="nav-btn nav-btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                Book Now </a></li></ul>
+
+      <!-- Mobile Hamburger Menu Icon -->
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
@@ -38,7 +49,8 @@
     </div>
   </nav>
 
-  <header class="hero" id="home">
+  <!-- Hero Banner -->
+  <div class="hero" id="home">
     <div class="hero-overlay">
       <div class="hero-content">
         <span class="badge">Pure Rural Bliss & Fresh Air</span>
@@ -46,11 +58,13 @@
         <p>Experience mango orchards, traditional Chulha meals, bullock cart safaris, and cozy rustic cottages away from city chaos.</p>
         <div class="hero-actions">
           <a href="#packages" class="btn btn-primary">Explore Packages</a>
-          <a href="#booking" class="btn btn-secondary">Enquire Booking</a>
+          <a href="https://wa.me/918208219849?text=Hello%20Anand%20dham,%20I%20would%20like%20to%20enquire%20about%20booking." class="btn btn-secondary btn-hero-whatsapp" target="_blank" rel="noopener noreferrer">
+              Enquire Booking</a>
         </div>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
   <section class="about section" id="about">
     <div class="container about-grid">
@@ -297,12 +311,25 @@
     </svg>
     Call Us Now
   </a>
+
+  <!-- Google Location Button -->
+  <a href="https://maps.app.goo.gl/69PdTthLJy8bMyaJ8" class="btn-action btn-location" target="_blank" rel="noopener noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+    </svg>
+    Get Directions
+  </a>
+  
 </div>
 
+  <!-- Footer with Logo and Name -->
   <footer class="footer">
     <div class="container footer-grid">
-      <div>
-        <h3>Anand dham</h3>
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img src="Images/Logo.png" alt="आनंदधाम Logo" class="footer-logo" />
+          <span class="footer-brand-text">Anand<span>धाम</span></span>
+        </div>
         <p>Your eco-friendly countryside sanctuary. Creating memorable family farm picnics since 2015.</p>
       </div>
       <div>
