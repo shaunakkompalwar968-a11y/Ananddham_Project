@@ -697,7 +697,6 @@ h1, h2, h3, .logo {
   border-radius: 4px;
 }
 
-/* Red close button positioned on the top-right corner */
 .close-btn {
   position: absolute;
   top: -12px;
@@ -705,10 +704,14 @@ h1, h2, h3, .logo {
   background: #ff4d4d;
   color: #ffffff;
   border: none;
-  width: 30px;
-  height: 30px;
+  width: 36px;        /* Increased slightly from 30px */
+  height: 36px;       /* Increased slightly from 30px */
   border-radius: 50%;
-  font-size: 16px;
+  font-size: 20px;     /* Made the cross sign larger */
   font-weight: bold;
   cursor: pointer;
+  display: flex;       /* Centers the 'X' inside the button */
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent; /* Removes blue tap highlight on mobile */
 }
