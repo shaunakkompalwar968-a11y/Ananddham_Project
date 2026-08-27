@@ -147,3 +147,23 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'ArrowLeft') prevImage();
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("imagePopup");
+  const closeBtn = document.getElementById("closeBtn");
+
+  // Show the popup as soon as the DOM loads
+  popup.classList.add("active");
+
+  // Dismiss popup when clicking the 'X'
+  closeBtn.addEventListener("click", () => {
+    popup.classList.remove("active");
+  });
+
+  // Dismiss popup when clicking outside the content area
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.classList.remove("active");
+    }
+  });
+});
