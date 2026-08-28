@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>आनंद धाम कृषी पर्यटन | अस्सल ग्रामीण जीवन</title>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span><i class="fas fa-map-marker-alt"></i> सीताखंडी तलाव, भोकर, बचोटी कॅम्प, महाराष्ट्र ४३१७४५</span>
+            <div class="top-contact">
+                <a href="tel:+918208219849"><i class="fas fa-phone"></i> +९१ ८२०८२ १९८४९</a>
+                <a href="mailto:bookings@ananddham.com"><i class="fas fa-envelope"></i> bookings@ananddham.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header id="main-header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="https://agritourism.in/wp-content/uploads/2023/07/ATDC-logo-01-01.png" alt="ATDC Logo" class="atdc-logo">
+                <img src="Images/Logo.png" alt="Anand Dham Logo" class="second-logo">
+                <h2>आनंद<span>धाम</span></h2>
+            </a>
+
+            <!-- Mobile Menu Icon -->
+            <div class="menu-btn" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Nav Links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" onclick="closeMenu()">मुख्य पृष्ठ</a></li>
+                <li><a href="#about" onclick="closeMenu()">आमच्याबद्दल</a></li>
+                <li><a href="#attractions" onclick="closeMenu()">आकर्षणे</a></li>
+                <li><a href="#seasonal" onclick="closeMenu()">हंगामी</a></li>
+                <li><a href="#packages" onclick="closeMenu()">पॅकेजेस</a></li>
+                <li><a href="#gallery" onclick="closeMenu()">गॅलरी</a></li>
+                <li><a href="https://wa.me/918208219849" class="btn-nav" onclick="closeMenu()">बुकिंग करा</a></li>
+                
+                <!-- Language Switcher (Active on Marathi) -->
+                <li class="lang-switcher">
+                    <a href="index.html" class="lang-btn">EN</a>
+                    <a href="marathi.html" class="lang-btn active">मराठी</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content reveal">
+            <span class="badge">शुद्ध हवा आणि अस्सल ग्रामीण आनंद</span>
+            <h1>अस्सल ग्रामीण जीवन आणि कृषी पर्यटनाचा थरार</h1>
+            <p>शहराच्या धकाधकीपासून दूर... आंब्याच्या बागा, चुलीवरचे अस्सल जेवण, बैलगाडी सफारी आणि निसर्गरम्य कॉटेजचा अनुभव घ्या.</p>
+            <div class="hero-btns">
+                <a href="#packages" class="btn-primary">पॅकेजेस पहा</a>
+                <a href="https://wa.me/918208219849" target="_blank" class="btn-secondary">बुकिंगसाठी चौकशी करा</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container about-grid">
+            <div class="about-text reveal">
+                <span class="section-subtitle">आनंद धाम मध्ये आपले स्वागत आहे</span>
+                <h2 class="section-title">कुटुंबे आणि कॉर्पोरेट्ससाठी ३५ एकरांचे कृषी पर्यटन केंद्र</h2>
+                <p>आनंद धाम हे तुम्हाला आणि तुमच्या मुलांना भारतीय कृषी परंपरेचा अस्सल अनुभव देण्यासाठी बनवले आहे. सेंद्रिय शेतातून फेरफटका मारा, ताज्या उसाच्या रसाची चव घ्या आणि हिरव्यागार झाडांच्या सावलीत विश्रांती घ्या.</p>
+                <div class="features-list">
+                    <div class="feature-item"><i class="fas fa-tree"></i> १०००+ फळझाडे आणि हिरवळ</div>
+                    <div class="feature-item"><i class="fas fa-leaf"></i> १००% सेंद्रिय शेती</div>
+                </div>
+            </div>
+            <div class="about-img reveal">
+                <img src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=800&q=80" alt="Rural Farm Walk">
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section id="attractions" class="attractions-section bg-light">
+        <div class="container text-center reveal">
+            <span class="section-subtitle">मनोरंजन आणि खेळ</span>
+            <h2 class="section-title">आमची प्रमुख आकर्षणे</h2>
+            <div class="grid-4">
+                <div class="attraction-card">
+                    <i class="fas fa-swimming-pool"></i>
+                    <h3>जलविहार आणि रेन डान्स</h3>
+                    <p>स्वच्छ पाण्याचा स्विमिंग पूल आणि कुटुंबासोबत संगीतावर रेन डान्सचा आनंद.</p>
+                </div>
+                <div class="attraction-card">
+                    <i class="fas fa-tractor"></i>
+                    <h3>बैलगाडी आणि ट्रॅक्टर राईड</h3>
+                    <p>संपूर्ण बागेची आणि शेताची सैर करण्यासाठी पारंपरिक बैलगाडी आणि ट्रॅक्टर सफारी.</p>
+                </div>
+                <div class="attraction-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>चुलीवरचे गावरान जेवण</h3>
+                    <p>गरमागरम पिठलं-भाकरी, ठेचा आणि सेंद्रिय भाज्यांपासून बनवलेले अस्सल जेवण.</p>
+                </div>
+                <div class="attraction-card">
+                    <i class="fas fa-bowling-ball"></i>
+                    <h3>पारंपरिक खेळ</h3>
+                    <p>विटी-दांडू, लगोरी, आर्चरी (धनुर्विद्या) आणि दोरखंडावरील रोमांचक खेळ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal Harvest Section -->
+    <section id="seasonal" class="seasonal-section">
+        <div class="container text-center reveal">
+            <span class="section-subtitle">पीक आणि हंगाम</span>
+            <h2 class="section-title">सध्या कोणता हंगाम सुरू आहे?</h2>
+            <div class="grid-3">
+                <div class="season-card">
+                    <h3>🥭 उन्हाळा विशेष</h3>
+                    <p><strong>मार्च – जून:</strong> ताजे आंबे तोडण्याचा अनुभव, थंडगार उसाचा रस आणि पाण्याचे खेळ (Water Splash).</p>
+                </div>
+                <div class="season-card">
+                    <h3>🌾 पावसाळा विशेष</h3>
+                    <p><strong>जुलै – ऑक्टोबर:</strong> हिरवीगार शेती, भातलावणीचा प्रत्यक्ष अनुभव आणि गरमागरम गावरान नाश्ता.</p>
+                </div>
+                <div class="season-card">
+                    <h3>🔥 हिवाळा - हुरडा पार्टी</h3>
+                    <p><strong>नोव्हेंबर – फेब्रुवारी:</strong> ताज्या ज्वारीचा हुरडा, संध्याकाळी कॅम्पफायर आणि रात्रीच्या आकाशाचे दर्शन.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section bg-light">
+        <div class="container text-center reveal">
+            <span class="section-subtitle">चित्रदालन</span>
+            <h2 class="section-title">आमची सुंदर क्षणचित्रे</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="Farm View"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Chulha Food"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=600&q=80" alt="Bullock Cart"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80" alt="Pool"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=600&q=80" alt="Cottages"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&q=80" alt="Farming"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages-section">
+        <div class="container text-center reveal">
+            <span class="section-subtitle">परवडणाऱ्या सहली</span>
+            <h2 class="section-title">लोकप्रिय पॅकेजेस</h2>
+            <div class="grid-2">
+                <div class="pricing-card">
+                    <h3>एकदिवसीय कृषी सहल</h3>
+                    <div class="price">₹४५० <span>/ प्रति व्यक्ती</span></div>
+                    <p class="time">सकाळी ९:०० – संध्याकाळी ६:००</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i> सकाळचा नाश्ता आणि चहा</li>
+                        <li><i class="fas fa-check-circle"></i> अमर्यादित दुपारचे जेवण (व्हेज / नॉन-व्हेज)</li>
+                        <li><i class="fas fa-check-circle"></i> संध्याकाळचा चहा आणि नाश्ता</li>
+                        <li><i class="fas fa-check-circle"></i> सर्व खेळ आणि स्विमिंग पूल मोफत</li>
+                    </ul>
+                    <a href="https://wa.me/918208219849" target="_blank" class="btn-primary full-width">एकदिवसीय सहल निवडा</a>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-badge">सर्वाधिक लोकप्रिय</div>
+                    <h3>निवासी कॉटेज पॅकेज (Night Stay)</h3>
+                    <div class="price">₹७५० <span>/ प्रति व्यक्ती</span></div>
+                    <p class="time">चेक-इन: दुपारी १२ | चेक-आउट: सकाळी १०</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i> स्वतंत्र एसी / नॉन-एसी फॅमिली कॉटेज</li>
+                        <li><i class="fas fa-check-circle"></i> चारही वेळचे जेवण (दुपार, संध्याकाळ, रात्र, सकाळ)</li>
+                        <li><i class="fas fa-check-circle"></i> रात्री कॅम्पफायर आणि संगीत</li>
+                        <li><i class="fas fa-check-circle"></i> सकाळची शेतसफर आणि पक्षी निरीक्षण</li>
+                    </ul>
+                    <a href="https://wa.me/918208219849" target="_blank" class="btn-secondary full-width">निवासी पॅकेज निवडा</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid reveal">
+            <div class="footer-about">
+                <div class="footer-logos">
+                    <img src="https://agritourism.in/wp-content/uploads/2023/07/ATDC-logo-01-01.png" alt="ATDC Logo" class="atdc-logo-footer">
+                    <img src="Images/Logo.png" alt="Anand Dham Logo" class="second-logo-footer">
+                </div>
+                <h2 class="footer-logo">आनंद<span>धाम</span></h2>
+                <p>तुमचे निसर्गरम्य विश्रामस्थान. २०१५ पासून कुटुंबांसाठी संस्मरणीय कृषी सहलींचे आयोजन.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>थेट संपर्क</h4>
+                <p><i class="fas fa-phone"></i> +९१ ८२०८२ १९८४९</p>
+                <p><i class="fas fa-map-marker-alt"></i> सीताखंडी तलाव, भोकर, बचोटी कॅम्प, महाराष्ट्र ४३१७४५</p>
+            </div>
+            <div class="footer-timing">
+                <h4>वेळ</h4>
+                <p>एकदिवसीय सहल: सकाळी ९:०० ते संध्याकाळी ६:००</p>
+                <p>आठवडाभर खुले (आगाऊ बुकिंग अनिवार्य)</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© २०२६ आनंद धाम कृषी पर्यटन. सर्व हक्क राखीव. डेव्हलपर: <strong>शौनक कोंपलवार</strong></p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-btns">
+        <a href="https://wa.me/918208219849" class="float-btn wa-btn" target="_blank" title="WhatsApp वर मेसेज करा"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:+918208219849" class="float-btn call-btn" title="आम्हाला कॉल करा"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://maps.app.goo.gl/69PdTthLJy8bMyaJ8" class="float-btn map-btn" target="_blank" title="मॅपवर पहा"><i class="fas fa-map-marker-alt"></i></a>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
