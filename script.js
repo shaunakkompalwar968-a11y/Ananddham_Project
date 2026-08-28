@@ -3,13 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('navLinks');
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
 
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('active'));
-  });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('active'));
+    });
+  }
 
   // 2. Dynamic Price & Group Discount Calculation
   const packageSelect = document.getElementById('packageSelect');
@@ -17,7 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const grandTotalElem = document.getElementById('grandTotal');
 
   function calculateBill() {
-    const rate = parseFloat(packageSelect.value) || 750;
+    if (!packageSelect || !guestCountInput || !grandTotalElem) return;
+    
+    const rate = parseFloat(packageSelect.value) || 450;
     const guests = parseInt(guestCountInput.value) || 1;
     let total = rate * guests;
 
@@ -29,31 +33,47 @@ document.addEventListener('DOMContentLoaded', () => {
     grandTotalElem.textContent = `₹${total.toLocaleString('en-IN')}`;
   }
 
-  packageSelect.addEventListener('change', calculateBill);
-  guestCountInput.addEventListener('input', calculateBill);
+  if (packageSelect && guestCountInput) {
+    packageSelect.addEventListener('change', calculateBill);
+    guestCountInput.addEventListener('input', calculateBill);
+  }
 
-  window.selectPackage = function(type, price) {
-    packageSelect.value = price;
-    calculateBill();
+  window.selectPackage = function(price) {
+    if (packageSelect) {
+      packageSelect.value = price;
+      calculateBill();
+    }
   };
 
-  // 3. Booking Request Handler
+  // 3. Booking Request Handler via WhatsApp
   const form = document.getElementById('agriBookingForm');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('guestName').value;
-    const phone = document.getElementById('contactNumber').value;
-    const date = document.getElementById('visitDate').value;
-    const total = grandTotalElem.textContent;
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('guestName').value;
+      const phone = document.getElementById('contactNumber').value;
+      const date = document.getElementById('visitDate').value;
+      const pkg = packageSelect.options[packageSelect.selectedIndex].text;
+      const guests = guestCountInput.value;
+      const total = grandTotalElem.textContent;
 
-    alert(
-      `🙏 Dhanyawad ${name}!\n\nWe have received your enquiry for ${date}.\nEstimated Booking Amount: ${total}.\nOur coordinator will call you at ${phone} to confirm availability.`
-    );
-    form.reset();
-    calculateBill();
-  });
+      const message = `Hello Anand dham,%0A%0A*New Booking Enquiry*%0A- Name: ${encodeURIComponent(name)}%0A- Phone: ${encodeURIComponent(phone)}%0A- Package: ${encodeURIComponent(pkg)}%0A- Guests: ${guests}%0A- Date: ${date}%0A- Total Estimate: ${total}`;
 
-  // ================= 4. GALLERY FILTER & LIGHTBOX =================
+      window.open(`https://wa.me/918208219849?text=${message}`, '_blank');
+    });
+  }
+
+  // 4. Floating Contact Widget Toggle
+  const fabToggle = document.getElementById('fabToggle');
+  const contactButtons = document.getElementById('contactButtons');
+
+  if (fabToggle && contactButtons) {
+    fabToggle.addEventListener('click', () => {
+      contactButtons.classList.toggle('hidden');
+    });
+  }
+
+  // 5. Gallery Filter & Lightbox
   const filterBtns = document.querySelectorAll('.filter-btn');
   const galleryItems = document.querySelectorAll('.gallery-item');
   const lightbox = document.getElementById('lightbox');
@@ -66,7 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentImgIndex = 0;
   let activeItems = [...galleryItems];
 
-  // Filtering Logic
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
@@ -87,10 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Open Lightbox
   function openLightbox(index) {
     currentImgIndex = index;
     const currentItem = activeItems[currentImgIndex];
+    if (!currentItem) return;
+
     const imgSrc = currentItem.querySelector('img').src;
     const captionText = currentItem.querySelector('.gallery-overlay span').textContent;
 
@@ -108,43 +128,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Lightbox Controls
-  function nextImage() {
-    currentImgIndex = (currentImgIndex + 1) % activeItems.length;
-    openLightbox(currentImgIndex);
-  }
+  if (nextBtn && prevBtn && lightboxClose) {
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentImgIndex = (currentImgIndex + 1) % activeItems.length;
+      openLightbox(currentImgIndex);
+    });
 
-  function prevImage() {
-    currentImgIndex = (currentImgIndex - 1 + activeItems.length) % activeItems.length;
-    openLightbox(currentImgIndex);
-  }
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentImgIndex = (currentImgIndex - 1 + activeItems.length) % activeItems.length;
+      openLightbox(currentImgIndex);
+    });
 
-  nextBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    nextImage();
-  });
-
-  prevBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    prevImage();
-  });
-
-  lightboxClose.addEventListener('click', () => {
-    lightbox.classList.remove('active');
-  });
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
+    lightboxClose.addEventListener('click', () => {
       lightbox.classList.remove('active');
-    }
-  });
+    });
 
-  // Keyboard navigation for Lightbox
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+      }
+    });
+  }
+
   document.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('active')) return;
+    if (!lightbox || !lightbox.classList.contains('active')) return;
     if (e.key === 'Escape') lightbox.classList.remove('active');
-    if (e.key === 'ArrowRight') nextImage();
-    if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'ArrowRight') nextBtn.click();
+    if (e.key === 'ArrowLeft') prevBtn.click();
   });
 });
-
