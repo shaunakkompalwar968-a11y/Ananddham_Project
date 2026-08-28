@@ -1,233 +1,332 @@
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Anand Dham Agrotourism | Authentic Village Life</title>
-            
-            <!-- FontAwesome for Icons -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-            
-            <!-- External CSS -->
-            <link rel="stylesheet" href="style.css">
-        </head>
-        <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anand Dham Agrotourism | Authentic Village Life</title>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-            <!-- Top Bar -->
-            <div class="top-bar">
-                <div class="top-bar-content">
-                    <span><i class="fas fa-map-marker-alt"></i> Sitakhandi talav, Bhokar, Bachoti kamp, Maharashtra 431745</span>
-                    <div class="top-contact">
-                        <a href="tel:+918208219849"><i class="fas fa-phone"></i> +91 82082 19849</a>
-                        <a href="mailto:bookings@ananddham.com"><i class="fas fa-envelope"></i> bookings@ananddham.com</a>
-                    </div>
-                </div>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span><i class="fas fa-map-marker-alt"></i> Sitakhandi talav, Bhokar, Bachoti kamp, Maharashtra 431745</span>
+            <div class="top-contact">
+                <a href="tel:+918208219849"><i class="fas fa-phone"></i> +91 82082 19849</a>
+                <a href="mailto:bookings@ananddham.com"><i class="fas fa-envelope"></i> bookings@ananddham.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header id="main-header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="https://agritourism.in/wp-content/uploads/2023/07/ATDC-logo-01-01.png" alt="ATDC Logo" class="atdc-logo">
+                <img src="Images/Logo.png" alt="Anand Dham Logo" class="second-logo">
+                <h2>Anand<span>Dham</span></h2>
+            </a>
+
+            <!-- Mobile Menu Icon -->
+            <div class="menu-btn" id="menu-btn">
+                <i class="fas fa-bars"></i>
             </div>
 
-            <!-- Navigation Bar -->
-            <header id="main-header">
-                <div class="nav-container">
-                    <a href="#" class="logo">
-                        <img src="https://agritourism.in/wp-content/uploads/2023/07/ATDC-logo-01-01.png" alt="ATDC Logo" class="atdc-logo">
-                        <img src="Images/Logo.png" alt="Anand Dham Logo" class="second-logo">
-                        <h2>Anand<span>Dham</span></h2>
-                    </a>
+            <!-- Nav Links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMenu()">About Us</a></li>
+                <li><a href="#attractions" onclick="closeMenu()">Attractions</a></li>
+                <li><a href="#seasonal" onclick="closeMenu()">Seasonal</a></li>
+                <li><a href="#packages" onclick="closeMenu()">Packages</a></li>
+                <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
+                <li><a href="https://wa.me/918208219849" class="btn-nav" onclick="closeMenu()">Book Now</a></li>
+                
+                <!-- Language Switcher -->
+                <li class="lang-switcher">
+                    <a href="index.html" class="lang-btn active">EN</a>
+                    <a href="marathi.html" class="lang-btn">मराठी</a>
+                </li>
+            </ul>
+        </div>
+    </header>
 
-                    <!-- Mobile Menu Icon -->
-                    <div class="menu-btn" id="menu-btn">
-                        <i class="fas fa-bars"></i>
-                    </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content reveal">
+            <span class="badge">Pure Rural Bliss & Fresh Air</span>
+            <h1>Authentic Village Life & Agro Adventure</h1>
+            <p>Experience mango orchards, traditional Chulha meals, bullock cart safaris, and cozy rustic cottages away from city chaos.</p>
+            <div class="hero-btns">
+                <a href="#packages" class="btn-primary">Explore Packages</a>
+                <a href="https://wa.me/918208219849" target="_blank" class="btn-secondary">Enquire Booking</a>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Nav Links -->
-                    <ul class="nav-links" id="nav-links">
-                        <li><a href="#home" onclick="closeMenu()">Home</a></li>
-                        <li><a href="#about" onclick="closeMenu()">About Us</a></li>
-                        <li><a href="#attractions" onclick="closeMenu()">Attractions</a></li>
-                        <li><a href="#seasonal" onclick="closeMenu()">Seasonal</a></li>
-                        <li><a href="#packages" onclick="closeMenu()">Packages</a></li>
-                        <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
-                        <li><a href="https://wa.me/918208219849" class="btn-nav" onclick="closeMenu()">Book Now</a></li>
-                        
-                        <!-- Language Switcher -->
-                        <li class="lang-switcher">
-                            <a href="index.html" class="lang-btn active">EN</a>
-                            <a href="marathi.html" class="lang-btn">मराठी</a>
-                        </li>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container about-grid">
+            <div class="about-text reveal">
+                <span class="section-subtitle">Welcome to Ananddham</span>
+                <h2 class="section-title">A 35-Acre Agro Sanctuary For Families & Corporates</h2>
+                <p>Ananddham is designed to give you and your children a genuine taste of Indian agricultural heritage. Walk through organic plantations, taste farm-fresh sugarcane juice, and rest under lush green canopies.</p>
+                <div class="features-list">
+                    <div class="feature-item"><i class="fas fa-tree"></i> 1000+ Fruit-Bearing Trees</div>
+                    <div class="feature-item"><i class="fas fa-leaf"></i> 100% Organic Farming</div>
+                </div>
+            </div>
+            <div class="about-img reveal">
+                <img src="Images/Entry_Gate.jpeg" alt="Rural Farm Walk">
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section id="attractions" class="attractions-section bg-light">
+        <div class="container text-center reveal">
+            <span class="section-subtitle">Fun & Entertainment</span>
+            <h2 class="section-title">Our Main Attractions</h2>
+            <div class="grid-4">
+                <div class="attraction-card">
+                    <i class="fas fa-swimming-pool"></i>
+                    <h3>Pool Raindance & Waterfall</h3>
+                    <p>Enjoy a clean freshwater swimming pool and a family rain dance with lively music.</p>
+                </div>
+                <div class="attraction-card">
+                    <i class="fas fa-tractor"></i>
+                    <h3>Horse Ride & Forest Safari</h3>
+                    <p>Traditional open-air safaris to explore our organic orchards and farm perimeter.</p>
+                </div>
+                <div class="attraction-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Authentic Chulha Food</h3>
+                    <p>Hot Pithla-Bhakri, Thecha, and traditional meals prepared fresh using organic vegetables.</p>
+                </div>
+                <div class="attraction-card">
+                    <i class="fas fa-bowling-ball"></i>
+                    <h3>Traditional Games</h3>
+                    <p>Experience the thrill of Viti-Dandu, Lagori, Archery, and exciting rope-way games.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal Harvest Section -->
+    <section id="seasonal" class="seasonal-section">
+        <div class="container text-center reveal">
+            <span class="section-subtitle">Harvest Calendar</span>
+            <h2 class="section-title">What's In Season Right Now?</h2>
+            <div class="grid-3">
+                <div class="season-card">
+                    <h3>🥭 Summer Special</h3>
+                    <p><strong>March – June:</strong> Fresh Mango Picking, Fresh Sugarcane Juice & Water Splash Activities.</p>
+                </div>
+                <div class="season-card">
+                    <h3>🌾 Monsoon Bliss</h3>
+                    <p><strong>July – October:</strong> Lush Green Farm Walks, Paddy Planting Experience & Hot Rural Snacks.</p>
+                </div>
+                <div class="season-card">
+                    <h3>🔥 Winter Hurda Party</h3>
+                    <p><strong>November – February:</strong> Fresh Tender Jowar (Hurda), Evening Campfire & Stargazing Stays.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section bg-light">
+        <div class="container text-center reveal">
+            <span class="section-subtitle">Visual Glimpse</span>
+            <h2 class="section-title">Moments at Ananddham</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="Images/Trip.png" alt="Farm View"></div>
+                <div class="gallery-item"><img src="Images/Boating.jpeg" alt="Chulha Food"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=600&q=80" alt="Bullock Cart"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80" alt="Pool"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=600&q=80" alt="Cottages"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&q=80" alt="Farming"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages-section">
+        <div class="container text-center reveal">
+            <span class="section-subtitle">Affordable Farm Outings</span>
+            <h2 class="section-title">Popular Packages</h2>
+            <div class="grid-2">
+                <div class="pricing-card">
+                    <h3>1-Day Agro Picnic</h3>
+                    <div class="price">₹450 <span>/ adult</span></div>
+                    <p class="time">9:00 AM – 6:00 PM</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i> Breakfast & Welcome Tea</li>
+                        <li><i class="fas fa-check-circle"></i> Full Buffet Lunch (Veg / Non-Veg)</li>
+                        <li><i class="fas fa-check-circle"></i> High Tea & Snacks</li>
+                        <li><i class="fas fa-check-circle"></i> Access to all rides & water zone</li>
                     </ul>
+                    <a href="https://wa.me/918208219849" target="_blank" class="btn-primary full-width">Select Day Picnic</a>
                 </div>
-            </header>
 
-            <!-- Hero Section -->
-            <section id="home" class="hero">
-                <div class="hero-content reveal">
-                    <span class="badge">Pure Rural Bliss & Fresh Air</span>
-                    <h1>Authentic Village Life & Agro Adventure</h1>
-                    <p>Experience mango orchards, traditional Chulha meals, bullock cart safaris, and cozy rustic cottages away from city chaos.</p>
-                    <div class="hero-btns">
-                        <a href="#packages" class="btn-primary">Explore Packages</a>
-                        <a href="https://wa.me/918208219849" target="_blank" class="btn-secondary">Enquire Booking</a>
-                    </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Overnight Cottage Stay</h3>
+                    <div class="price">₹750 <span>/ person</span></div>
+                    <p class="time">Check-in: 12 PM | Check-out: 10 AM</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i> Private AC / Non-AC Family Cottage</li>
+                        <li><i class="fas fa-check-circle"></i> All 4 Meals (Lunch, High Tea, Dinner, Breakfast)</li>
+                        <li><i class="fas fa-check-circle"></i> Night Campfire & Stargazing</li>
+                        <li><i class="fas fa-check-circle"></i> Morning Farm Trek & Bird Watching</li>
+                    </ul>
+                    <a href="https://wa.me/918208219849" target="_blank" class="btn-secondary full-width">Select Overnight Stay</a>
                 </div>
-            </section>
-
-            <!-- About Section -->
-            <section id="about" class="about-section">
-                <div class="container about-grid">
-                    <div class="about-text reveal">
-                        <span class="section-subtitle">Welcome to Ananddham</span>
-                        <h2 class="section-title">A 35-Acre Agro Sanctuary For Families & Corporates</h2>
-                        <p>Ananddham is designed to give you and your children a genuine taste of Indian agricultural heritage. Walk through organic plantations, taste farm-fresh sugarcane juice, and rest under lush green canopies.</p>
-                        <div class="features-list">
-                            <div class="feature-item"><i class="fas fa-tree"></i> 1000+ Fruit-Bearing Trees</div>
-                            <div class="feature-item"><i class="fas fa-leaf"></i> 100% Organic Farming</div>
-                        </div>
-                    </div>
-                    <div class="about-img reveal">
-                        <img src="Images/Entry_Gate.jpeg" alt="Rural Farm Walk">
-                    </div>
-                </div>
-            </section>
-
-            <!-- Attractions Section -->
-            <section id="attractions" class="attractions-section bg-light">
-                <div class="container text-center reveal">
-                    <span class="section-subtitle">Fun & Entertainment</span>
-                    <h2 class="section-title">Our Main Attractions</h2>
-                    <div class="grid-4">
-                        <div class="attraction-card">
-                            <i class="fas fa-swimming-pool"></i>
-                            <h3>Pool & Rain Dance</h3>
-                            <p>Enjoy a clean freshwater swimming pool and a family rain dance with lively music.</p>
-                        </div>
-                        <div class="attraction-card">
-                            <i class="fas fa-tractor"></i>
-                            <h3>Horse Cart & Tractor Ride</h3>
-                            <p>Traditional open-air safaris to explore our organic orchards and farm perimeter.</p>
-                        </div>
-                        <div class="attraction-card">
-                            <i class="fas fa-utensils"></i>
-                            <h3>Authentic Chulha Food</h3>
-                            <p>Hot Pithla-Bhakri, Thecha, and traditional meals prepared fresh using organic vegetables.</p>
-                        </div>
-                        <div class="attraction-card">
-                            <i class="fas fa-bowling-ball"></i>
-                            <h3>Traditional Games</h3>
-                            <p>Experience the thrill of Viti-Dandu, Lagori, Archery, and exciting rope-way games.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Seasonal Harvest Section -->
-            <section id="seasonal" class="seasonal-section">
-                <div class="container text-center reveal">
-                    <span class="section-subtitle">Harvest Calendar</span>
-                    <h2 class="section-title">What's In Season Right Now?</h2>
-                    <div class="grid-3">
-                        <div class="season-card">
-                            <h3>🥭 Summer Special</h3>
-                            <p><strong>March – June:</strong> Fresh Mango Picking, Fresh Sugarcane Juice & Water Splash Activities.</p>
-                        </div>
-                        <div class="season-card">
-                            <h3>🌾 Monsoon Bliss</h3>
-                            <p><strong>July – October:</strong> Lush Green Farm Walks, Paddy Planting Experience & Hot Rural Snacks.</p>
-                        </div>
-                        <div class="season-card">
-                            <h3>🔥 Winter Hurda Party</h3>
-                            <p><strong>November – February:</strong> Fresh Tender Jowar (Hurda), Evening Campfire & Stargazing Stays.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Gallery Section -->
-            <section id="gallery" class="gallery-section bg-light">
-                <div class="container text-center reveal">
-                    <span class="section-subtitle">Visual Glimpse</span>
-                    <h2 class="section-title">Moments at Ananddham</h2>
-                    <div class="gallery-grid">
-                        <div class="gallery-item"><img src="Images/Trip.png" alt="Farm View"></div>
-                        <div class="gallery-item"><img src="Images/Boating.jpeg" alt="Chulha Food"></div>
-                        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=600&q=80" alt="Bullock Cart"></div>
-                        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80" alt="Pool"></div>
-                        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=600&q=80" alt="Cottages"></div>
-                        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&q=80" alt="Farming"></div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Packages Section -->
-            <section id="packages" class="packages-section">
-                <div class="container text-center reveal">
-                    <span class="section-subtitle">Affordable Farm Outings</span>
-                    <h2 class="section-title">Popular Packages</h2>
-                    <div class="grid-2">
-                        <div class="pricing-card">
-                            <h3>1-Day Agro Picnic</h3>
-                            <div class="price">₹450 <span>/ adult</span></div>
-                            <p class="time">9:00 AM – 6:00 PM</p>
-                            <ul class="package-features">
-                                <li><i class="fas fa-check-circle"></i> Breakfast & Welcome Tea</li>
-                                <li><i class="fas fa-check-circle"></i> Full Buffet Lunch (Veg / Non-Veg)</li>
-                                <li><i class="fas fa-check-circle"></i> High Tea & Snacks</li>
-                                <li><i class="fas fa-check-circle"></i> Access to all rides & water zone</li>
-                            </ul>
-                            <a href="https://wa.me/918208219849" target="_blank" class="btn-primary full-width">Select Day Picnic</a>
-                        </div>
-
-                        <div class="pricing-card popular">
-                            <div class="popular-badge">Most Popular</div>
-                            <h3>Overnight Cottage Stay</h3>
-                            <div class="price">₹750 <span>/ person</span></div>
-                            <p class="time">Check-in: 12 PM | Check-out: 10 AM</p>
-                            <ul class="package-features">
-                                <li><i class="fas fa-check-circle"></i> Private AC / Non-AC Family Cottage</li>
-                                <li><i class="fas fa-check-circle"></i> All 4 Meals (Lunch, High Tea, Dinner, Breakfast)</li>
-                                <li><i class="fas fa-check-circle"></i> Night Campfire & Stargazing</li>
-                                <li><i class="fas fa-check-circle"></i> Morning Farm Trek & Bird Watching</li>
-                            </ul>
-                            <a href="https://wa.me/918208219849" target="_blank" class="btn-secondary full-width">Select Overnight Stay</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Footer -->
-            <footer>
-                <div class="container footer-grid reveal">
-                    <div class="footer-about">
-                        <div class="footer-logos">
-                            <img src="https://agritourism.in/wp-content/uploads/2023/07/ATDC-logo-01-01.png" alt="ATDC Logo" class="atdc-logo-footer">
-                            <img src="Images/Logo.png" alt="Anand Dham Logo" class="second-logo-footer">
-                        </div>
-                        <h2 class="footer-logo">Anand<span>Dham</span></h2>
-                        <p>Your eco-friendly countryside sanctuary. Creating memorable family farm picnics since 2015.</p>
-                    </div>
-                    <div class="footer-contact">
-                        <h4>Direct Contact</h4>
-                        <p><i class="fas fa-phone"></i> +91 82082 19849</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Sitakhandi talav, Bhokar, Bachoti kamp, Maharashtra 431745</p>
-                    </div>
-                    <div class="footer-timing">
-                        <h4>Timings</h4>
-                        <p>Day Tours: 9:00 AM to 6:00 PM</p>
-                        <p>Open All 7 Days (Prior booking mandatory)</p>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>© 2026 Anand dham Agrotourism. All rights reserved. Developed by <strong>Shaunak Kompalwar</strong></p>
-                </div>
-            </footer>
-
-            <!-- Floating Action Buttons -->
-            <div class="floating-btns">
-                <a href="https://wa.me/918208219849" class="float-btn wa-btn" target="_blank" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
-                <a href="tel:+918208219849" class="float-btn call-btn" title="Call Us"><i class="fas fa-phone-alt"></i></a>
-                <a href="https://maps.app.goo.gl/69PdTthLJy8bMyaJ8" class="float-btn map-btn" target="_blank" title="View on Map"><i class="fas fa-map-marker-alt"></i></a>
             </div>
+        </div>
+    </section>
 
-            <!-- External JavaScript -->
-            <script src="script.js"></script>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="testimonials-title">Visitor Testimonials</h2>
+                <p class="testimonials-subtitle">Read experiences from families who visited us, or submit your own review to help future nature lovers!</p>
+            </div>
+            
+            <div class="testimonials-grid reveal">
+                <!-- Left: Testimonial Card -->
+                <div class="testimonial-display">
+                    <div class="testimonial-card">
+                        <div class="stars-rating">
+                            <div>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="sentiment-badge">POSITIVE (95%)</span>
+                        </div>
+                        <p class="testimonial-text">"The trekking and the cottage package were absolutely incredible. The local food is cooked organically and reminds us of traditional home dishes. Our kids loved the boating!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SR</div>
+                            <div class="author-info">
+                                <h4>Sanjay Rao</h4>
+                                <span>Family Visitor</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-dots">
+                        <span class="dot"></span>
+                        <span class="dot active"></span>
+                    </div>
+                </div>
 
-        </body>
-        </html>
+                <!-- Right: Review Form -->
+                <div class="review-form-container">
+                    <h3>Leave a Review</h3>
+                    <form class="review-form">
+                        <div class="form-group">
+                            <label>Your Rating</label>
+                            <div class="form-stars" id="rating-stars">
+                                <i class="fas fa-star" data-value="1"></i>
+                                <i class="fas fa-star" data-value="2"></i>
+                                <i class="fas fa-star" data-value="3"></i>
+                                <i class="fas fa-star" data-value="4"></i>
+                                <i class="fas fa-star" data-value="5"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewerName">Name</label>
+                            <input type="text" id="reviewerName" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewDesc">Review Description</label>
+                            <textarea id="reviewDesc" rows="4" placeholder="Share your experience..."></textarea>
+                        </div>
+                        <button type="button" class="btn-submit-review">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid reveal">
+            <div class="footer-about">
+                <div class="footer-logos">
+                    <img src="https://agritourism.in/wp-content/uploads/2023/07/ATDC-logo-01-01.png" alt="ATDC Logo" class="atdc-logo-footer">
+                    <img src="Images/Logo.png" alt="Anand Dham Logo" class="second-logo-footer">
+                </div>
+                <h2 class="footer-logo">Anand<span>Dham</span></h2>
+                <p>Your eco-friendly countryside sanctuary. Creating memorable family farm picnics since 2015.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Direct Contact</h4>
+                <p><i class="fas fa-phone"></i> +91 82082 19849</p>
+                <p><i class="fas fa-map-marker-alt"></i> Sitakhandi talav, Bhokar, Bachoti kamp, Maharashtra 431745</p>
+            </div>
+            <div class="footer-timing">
+                <h4>Timings</h4>
+                <p>Day Tours: 9:00 AM to 6:00 PM</p>
+                <p>Open All 7 Days (Prior booking mandatory)</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Anand dham Agrotourism. All rights reserved. Developed by <strong>Shaunak Kompalwar</strong></p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-btns">
+        <a href="https://wa.me/918208219849" class="float-btn wa-btn" target="_blank" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:+918208219849" class="float-btn call-btn" title="Call Us"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://maps.app.goo.gl/69PdTthLJy8bMyaJ8" class="float-btn map-btn" target="_blank" title="View on Map"><i class="fas fa-map-marker-alt"></i></a>
+        
+        <!-- New AI Bot Widget Button -->
+        <a href="#" class="float-btn ai-bot-btn" title="Chat with AI" id="ai-chat-toggle">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="AI Assistant">
+        </a>
+    </div>
+
+    <!-- AI Chatbot Modal Widget -->
+    <div class="ai-chat-container" id="ai-chat-container">
+        <div class="ai-chat-header">
+            <div class="ai-chat-profile">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="AI Guide">
+                <div>
+                    <h4>Anand Dham Assistant</h4>
+                    <span class="online-status"><i class="fas fa-circle"></i> Online</span>
+                </div>
+            </div>
+            <button id="close-chat" class="close-chat-btn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="ai-chat-messages" id="ai-chat-messages">
+            <div class="bot-msg msg">
+                <p>Namaste! 🙏 Welcome to Anand Dham. How can I help you today? You can ask about our packages, food, timings, or location.</p>
+            </div>
+        </div>
+
+        <!-- Quick Prompt Chips -->
+        <div class="ai-quick-prompts">
+            <button class="quick-chip" onclick="sendQuickPrompt('What are the packages and prices?')">Packages & Pricing</button>
+            <button class="quick-chip" onclick="sendQuickPrompt('What activities are available?')">Activities</button>
+            <button class="quick-chip" onclick="sendQuickPrompt('Where is Anand Dham located?')">Location</button>
+        </div>
+
+        <div class="ai-chat-input-area">
+            <input type="text" id="ai-user-input" placeholder="Type your question here..." autocomplete="off">
+            <button id="send-ai-msg"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
