@@ -61,19 +61,38 @@ document.addEventListener("DOMContentLoaded", function() {
 const starElements = document.querySelectorAll('#rating-stars .fa-star');
 let selectedRating = 0; // Variable to store the user's selected rating
 
-if (starElements) {
+// Helper function to color the stars
+function highlightStars(rating) {
     starElements.forEach(star => {
+        const starValue = parseInt(star.getAttribute('data-value'));
+        if (starValue <= rating) {
+            star.style.color = '#FF8F00'; // Orange for selected
+        } else {
+            star.style.color = '#d1d5db'; // Gray for unselected
+        }
+    });
+}
+
+// Make sure stars start out gray on page load
+highlightStars(0);
+
+if (starElements.length > 0) {
+    starElements.forEach(star => {
+        // Light up stars when hovering over them
+        star.addEventListener('mouseover', (e) => {
+            const hoverValue = parseInt(e.target.getAttribute('data-value'));
+            highlightStars(hoverValue);
+        });
+
+        // Revert back to clicked rating when mouse moves away
+        star.addEventListener('mouseout', () => {
+            highlightStars(selectedRating);
+        });
+
+        // Lock in the rating on click
         star.addEventListener('click', (e) => {
             selectedRating = parseInt(e.target.getAttribute('data-value'));
-            
-            // Highlight the selected stars
-            starElements.forEach(s => {
-                if(s.getAttribute('data-value') <= selectedRating) {
-                    s.style.color = 'var(--accent-orange)'; // Colored in
-                } else {
-                    s.style.color = '#d1d5db'; // Grayed out for unselected
-                }
-            });
+            highlightStars(selectedRating);
         });
     });
 }
@@ -102,7 +121,7 @@ if (submitReviewBtn) {
             return;
         }
 
-        // 2. Capture the Data (Normally, you send this to your database here)
+        // 2. Capture the Data 
         const reviewData = {
             rating: selectedRating,
             name: name,
@@ -110,7 +129,6 @@ if (submitReviewBtn) {
             date: new Date().toLocaleDateString()
         };
         
-        // Log it to the console so you can see it working
         console.log("New Review Ready to Save:", reviewData);
 
         // 3. Show Success State on the Button
@@ -121,15 +139,12 @@ if (submitReviewBtn) {
 
         // 4. Reset the form after 2 seconds
         setTimeout(() => {
-            // Clear inputs
             reviewerNameInput.value = "";
             reviewDescInput.value = "";
             selectedRating = 0;
             
-            // Reset stars visually
-            starElements.forEach(s => {
-                s.style.color = '#d1d5db'; 
-            });
+            // Reset stars visually back to gray
+            highlightStars(0);
 
             // Revert button back to normal
             submitReviewBtn.innerText = originalText;
@@ -149,7 +164,7 @@ const chatMessages = document.getElementById('ai-chat-messages');
 const userInput = document.getElementById('ai-user-input');
 const sendBtn = document.getElementById('send-ai-msg');
 
-// Knowledge Base for Anand Dham (Handles both English and Marathi keywords)
+// Knowledge Base for Anand Dham 
 const farmKnowledgeBase = [
     {
         keywords: ['package', 'packages', 'price', 'pricing', 'cost', 'fee', 'charge', 'दर', 'पॅकेज', 'किंमत'],
