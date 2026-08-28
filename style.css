@@ -115,9 +115,10 @@ header.scrolled { background: var(--white); padding: 10px 0; }
 .gallery-item:hover img { transform: scale(1.1); }
 
 .pricing-card { padding: 40px 30px; text-align: left; position: relative; border: 1px solid #eee; }
-.pricing-card.popular { border: 2px solid var(--primary-green); background-color: #F8FFF9; transform: scale(1.03); }
+.pricing-card.popular { border: 2px solid var(--primary-green); background-color: #E8F5E9; transform: scale(1.03); }
 .popular-badge { position: absolute; top: -15px; right: 20px; background: var(--primary-green); color: var(--white); padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; }
 .pricing-card h3 { font-size: 24px; color: var(--text-dark); margin-bottom: 15px; font-weight: 700; }
+.pricing-card.popular h3 { font-size: 24px; color: var(--text-dark); margin-bottom: 15px; font-weight: 700; }
 .price { font-size: 38px; color: var(--primary-green); font-weight: 700; margin-bottom: 5px; }
 .price span { font-size: 16px; color: var(--text-light); font-weight: 400; }
 .time { color: var(--accent-orange); font-weight: 600; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px; font-size: 15px;}
@@ -145,10 +146,7 @@ footer p { margin-bottom: 10px; font-size: 14px; color: #E8F5E9; line-height: 1.
 .map-btn { background-color: #EA4335; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
 
-
-/* --- 📱 RESPONSIVE DESIGN (PC & MOBILE) ---*/
-
-
+/* Pc And Mobile Adjustment */
 @media (max-width: 992px) {
     .about-grid, .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
     .feature-item { justify-content: center; }
@@ -182,4 +180,444 @@ footer p { margin-bottom: 10px; font-size: 14px; color: #E8F5E9; line-height: 1.
     .pricing-card { padding: 30px 20px; }
     
     .float-btn { width: 45px; height: 45px; font-size: 18px; }
+}
+
+/* =========================================
+   TESTIMONIALS SECTION (Light Theme)
+   ========================================= */
+.testimonials-section {
+    background-color: var(--light-green); 
+    padding: 80px 0;
+    color: var(--text-dark);
+}
+.testimonials-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+}
+.testimonials-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-orange);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+.testimonials-subtitle {
+    color: var(--text-light);
+    margin-top: 15px;
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: stretch;
+}
+
+/* Testimonial Card Display */
+.testimonial-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.testimonial-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+}
+.stars-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--accent-orange); 
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+.sentiment-badge {
+    background: var(--light-green);
+    color: var(--primary-green);
+    border: 1px solid var(--primary-green);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.testimonial-text {
+    font-size: 18px;
+    font-style: italic;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.author-avatar {
+    width: 48px;
+    height: 48px;
+    background-color: var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--white);
+}
+.author-info h4 {
+    margin: 0 0 3px;
+    font-size: 16px;
+    color: var(--primary-green);
+}
+.author-info span {
+    font-size: 13px;
+    color: var(--text-light);
+}
+.carousel-dots {
+    margin-top: 25px;
+    display: flex;
+    gap: 8px;
+}
+.carousel-dots .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #d1d5db;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.carousel-dots .dot.active {
+    width: 24px;
+    background-color: var(--accent-orange);
+}
+
+/* Leave a Review Form */
+.review-form-container {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.review-form-container h3 {
+    font-size: 26px;
+    color: var(--primary-green);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+.form-stars i {
+    color: var(--accent-orange);
+    font-size: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.form-stars i:hover { transform: scale(1.1); }
+.review-form input, .review-form textarea {
+    width: 100%;
+    background-color: #FAFAFA;
+    border: 1px solid #e2e8f0;
+    color: var(--text-dark);
+    padding: 14px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+.review-form input:focus, .review-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-orange);
+    background-color: var(--white);
+}
+.btn-submit-review {
+    width: 100%;
+    background-color: var(--accent-orange);
+    color: var(--white);
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+.btn-submit-review:hover {
+    background-color: #E65100;
+    transform: translateY(-2px);
+}
+
+/* AI Bot Floating Button Styling */
+.ai-bot-btn {
+    border: 3px solid #25D366;
+    width: 60px !important;
+    height: 60px !important;
+    padding: 0;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.ai-bot-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- AI Chatbot Modal Styling --- */
+.ai-chat-container {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    height: 520px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 10000;
+    animation: slideUp 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid #e0e0e0;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.ai-chat-header {
+    background: var(--primary-green);
+    color: #ffffff;
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ai-chat-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ai-chat-profile img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+}
+
+.ai-chat-profile h4 {
+    font-size: 15px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.online-status {
+    font-size: 11px;
+    color: #a7f3d0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.online-status i {
+    font-size: 7px;
+}
+
+.close-chat-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.ai-chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #f8fafc;
+}
+
+.msg {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.bot-msg {
+    background: #e8f5e9;
+    color: #1b5e20;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+.user-msg {
+    background: var(--accent-orange);
+    color: #ffffff;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+/* Quick Chips */
+.ai-quick-prompts {
+    display: flex;
+    gap: 6px;
+    padding: 8px 12px;
+    background: #f1f5f9;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.ai-quick-prompts::-webkit-scrollbar { display: none; }
+
+.quick-chip {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    padding: 5px 10px;
+    border-radius: 14px;
+    font-size: 12px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quick-chip:hover {
+    background: var(--light-green);
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+}
+
+/* Input Box */
+.ai-chat-input-area {
+    display: flex;
+    border-top: 1px solid #e2e8f0;
+    padding: 10px;
+    background: #ffffff;
+    gap: 8px;
+}
+
+.ai-chat-input-area input {
+    flex: 1;
+    border: 1px solid #cbd5e1;
+    padding: 10px 14px;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+}
+
+.ai-chat-input-area input:focus {
+    border-color: var(--primary-green);
+}
+
+.ai-chat-input-area button {
+    background: var(--primary-green);
+    color: #ffffff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.ai-chat-input-area button:hover {
+    background: #1b5e20;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS & UX ENHANCEMENTS
+   ========================================= */
+
+/* Ensure all images scale fluidly and never overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Specific adjustments for small mobile screens (Phones) */
+@media (max-width: 480px) {
+    /* 1. Scale down the Hero text for smaller screens */
+    .hero {
+        padding: 80px 15px;
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    /* 2. Chat Widget - Prevent height overflow and fit screen perfectly */
+    .ai-chat-container {
+        width: calc(100vw - 30px);
+        right: 15px;
+        bottom: 85px;
+        height: calc(100vh - 120px); 
+        max-height: 550px;
+    }
+
+    /* 3. Compress Testimonial and Form padding to save screen space */
+    .testimonial-card, 
+    .review-form-container {
+        padding: 25px 20px;
+    }
+
+    .testimonials-title {
+        font-size: 28px;
+    }
+
+    /* 4. Adjust Floating Buttons so they don't block content */
+    .float-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+    
+    /* Keep the AI bot slightly larger than other buttons for emphasis */
+    .ai-bot-btn {
+        width: 55px !important;
+        height: 55px !important;
+        margin-top: 5px;
+    }
+    
+    /* 5. Ensure Top Bar contact info stacks neatly */
+    .top-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 8px;
+    }
+    .top-contact a {
+        margin: 0;
+    }
+}
+
+/* Adjustments for Tablets */
+@media (max-width: 992px) {
+    /* Ensure the chat widget doesn't overlap centered content too much */
+    .ai-chat-container {
+        bottom: 100px;
+    }
 }
