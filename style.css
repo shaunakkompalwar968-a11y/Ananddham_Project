@@ -90,7 +90,7 @@ header.scrolled { background: var(--white); padding: 10px 0; }
 .section-subtitle { color: var(--accent-orange); font-weight: 600; display: block; margin-bottom: 10px; font-size: 16px;}
 .section-title { font-size: 36px; color: var(--primary-green); margin-bottom: 40px; font-weight: 700; }
 
-/* --- Layout Grids (Responsive) --- */
+/* --- Layout Grids --- */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
 .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }
 .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
@@ -125,62 +125,6 @@ header.scrolled { background: var(--white); padding: 10px 0; }
 .package-features { list-style: none; }
 .package-features li { margin-bottom: 12px; color: var(--text-light); font-size: 15px; display: flex; align-items: flex-start;}
 .package-features i { color: var(--primary-green); margin-right: 10px; margin-top: 5px;}
-
-/* --- Footer --- */
-footer { background: var(--primary-green); color: var(--white); padding: 60px 0 20px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 40px; margin-bottom: 20px; }
-.footer-logos { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
-.atdc-logo-footer, .second-logo-footer { height: 40px; background: white; padding: 5px; border-radius: 5px; }
-.footer-logo { font-size: 30px; margin-bottom: 15px; font-weight: 700;}
-.footer-logo span { color: var(--accent-orange); }
-footer h4 { margin-bottom: 20px; font-size: 18px; color: var(--accent-orange); font-weight: 600;}
-footer p { margin-bottom: 10px; font-size: 14px; color: #E8F5E9; line-height: 1.6; }
-.footer-bottom { text-align: center; font-size: 13px; color: #C8E6C9; padding: 10px 0; }
-
-/* --- Floating Buttons --- */
-.floating-btns { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 1000; }
-.float-btn { width: 48px; height: 48px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: var(--white); text-decoration: none; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s; }
-.float-btn:hover { transform: scale(1.1); }
-.wa-btn { background-color: #25D366; animation: pulse 2s infinite; }
-.call-btn { background-color: #007BFF; }
-.map-btn { background-color: #EA4335; }
-@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
-
-/* Pc And Mobile Adjustment */
-@media (max-width: 992px) {
-    .about-grid, .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
-    .feature-item { justify-content: center; }
-    .pricing-card.popular { transform: scale(1); }
-    .footer-logos { justify-content: center; } 
-    .top-bar-content { flex-direction: column; gap: 8px; justify-content: center;}
-    .top-contact a { margin: 0 10px; }
-}
-
-@media (max-width: 768px) {
-    .about-section, .attractions-section, .seasonal-section, .gallery-section, .packages-section { padding: 50px 0; }
-    
-    .menu-btn { display: block; }
-    .nav-links { 
-        position: fixed; top: 65px; right: -100%; flex-direction: column; background: var(--white); 
-        width: 100%; text-align: center; padding: 20px 0; box-shadow: 0 5px 10px rgba(0,0,0,0.1); transition: right 0.4s ease;
-    }
-    .nav-links.active { right: 0; }
-    .nav-links li { margin: 12px 0; }
-    .logo h2 { font-size: 22px; }
-    
-    /* Mobile Language Switcher */
-    .lang-switcher { margin: 15px auto !important; display: inline-flex; }
-
-    .hero h1 { font-size: 32px; }
-    .hero p { font-size: 16px; margin-bottom: 25px;}
-    .section-title { font-size: 28px; margin-bottom: 30px; }
-    
-    .grid-4, .grid-3, .grid-2, .gallery-grid { grid-template-columns: 1fr; gap: 20px; }
-    .gallery-item { height: 250px; }
-    .pricing-card { padding: 30px 20px; }
-    
-    .float-btn { width: 45px; height: 45px; font-size: 18px; }
-}
 
 /* =========================================
    TESTIMONIALS SECTION (Light Theme)
@@ -362,7 +306,29 @@ footer p { margin-bottom: 10px; font-size: 14px; color: #E8F5E9; line-height: 1.
     transform: translateY(-2px);
 }
 
-/* AI Bot Floating Button Styling */
+/* --- Footer --- */
+footer { background: var(--primary-green); color: var(--white); padding: 60px 0 20px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 40px; margin-bottom: 20px; }
+.footer-logos { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+.atdc-logo-footer, .second-logo-footer { height: 40px; background: white; padding: 5px; border-radius: 5px; }
+.footer-logo { font-size: 30px; margin-bottom: 15px; font-weight: 700;}
+.footer-logo span { color: var(--accent-orange); }
+footer h4 { margin-bottom: 20px; font-size: 18px; color: var(--accent-orange); font-weight: 600;}
+footer p { margin-bottom: 10px; font-size: 14px; color: #E8F5E9; line-height: 1.6; }
+.footer-bottom { text-align: center; font-size: 13px; color: #C8E6C9; padding: 10px 0; }
+
+/* --- Floating Buttons --- */
+.floating-btns { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 1000; }
+.float-btn { width: 48px; height: 48px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: var(--white); text-decoration: none; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s; }
+.float-btn:hover { transform: scale(1.1); }
+.wa-btn { background-color: #25D366; animation: pulse 2s infinite; }
+.call-btn { background-color: #007BFF; }
+.map-btn { background-color: #EA4335; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+
+/* =========================================
+   AI CHATBOT WIDGET
+   ========================================= */
 .ai-bot-btn {
     border: 3px solid #25D366;
     width: 60px !important;
@@ -377,7 +343,6 @@ footer p { margin-bottom: 10px; font-size: 14px; color: #E8F5E9; line-height: 1.
     object-fit: cover;
 }
 
-/* --- AI Chatbot Modal Styling --- */
 .ai-chat-container {
     position: fixed;
     bottom: 90px;
@@ -549,27 +514,70 @@ footer p { margin-bottom: 10px; font-size: 14px; color: #E8F5E9; line-height: 1.
     background: #1b5e20;
 }
 
-/* =========================================
-   MOBILE RESPONSIVENESS & UX ENHANCEMENTS
-   ========================================= */
-
-/* Ensure all images scale fluidly and never overflow */
+/* Ensure all images scale fluidly */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Specific adjustments for small mobile screens (Phones) */
-@media (max-width: 480px) {
-    /* 1. Scale down the Hero text for smaller screens */
-    .hero {
-        padding: 80px 15px;
-    }
-    .hero h1 {
-        font-size: 28px;
-    }
 
-    /* 2. Chat Widget - Prevent height overflow and fit screen perfectly */
+/* =========================================
+   MEDIA QUERIES (MUST BE AT THE BOTTOM)
+   ========================================= */
+
+/* Tablets and Smaller Screens */
+@media (max-width: 992px) {
+    /* THIS FIXES THE SQUISHED TESTIMONIALS & GRIDS */
+    .about-grid, 
+    .footer-grid, 
+    .testimonials-grid { 
+        grid-template-columns: 1fr !important; 
+        text-align: center; 
+        gap: 30px; 
+    }
+    
+    .feature-item { justify-content: center; }
+    .pricing-card.popular { transform: scale(1); }
+    .footer-logos { justify-content: center; } 
+    
+    .top-bar-content { flex-direction: column; gap: 8px; justify-content: center;}
+    .top-contact a { margin: 0 10px; }
+    
+    .ai-chat-container { bottom: 100px; }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+    .about-section, .attractions-section, .seasonal-section, .gallery-section, .packages-section, .testimonials-section { 
+        padding: 50px 0; 
+    }
+    
+    .menu-btn { display: block; }
+    .nav-links { 
+        position: fixed; top: 65px; right: -100%; flex-direction: column; background: var(--white); 
+        width: 100%; text-align: center; padding: 20px 0; box-shadow: 0 5px 10px rgba(0,0,0,0.1); transition: right 0.4s ease;
+    }
+    .nav-links.active { right: 0; }
+    .nav-links li { margin: 12px 0; }
+    .logo h2 { font-size: 22px; }
+    
+    .lang-switcher { margin: 15px auto !important; display: inline-flex; }
+
+    .hero h1 { font-size: 32px; }
+    .hero p { font-size: 16px; margin-bottom: 25px;}
+    .section-title { font-size: 28px; margin-bottom: 30px; }
+    
+    .grid-4, .grid-3, .grid-2, .gallery-grid { grid-template-columns: 1fr; gap: 20px; }
+    .gallery-item { height: 250px; }
+    .pricing-card { padding: 30px 20px; }
+}
+
+/* Smallest Screens (iPhones, Androids) */
+@media (max-width: 480px) {
+    .hero { padding: 80px 15px; }
+    .hero h1 { font-size: 28px; }
+
+    /* Fix to prevent AI Chat from going off screen */
     .ai-chat-container {
         width: calc(100vw - 30px);
         right: 15px;
@@ -578,46 +586,38 @@ img {
         max-height: 550px;
     }
 
-    /* 3. Compress Testimonial and Form padding to save screen space */
     .testimonial-card, 
     .review-form-container {
         padding: 25px 20px;
     }
-
-    .testimonials-title {
-        font-size: 28px;
+    
+    /* Fix for stars stacking vertically on small screens */
+    .stars-rating {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
     }
 
-    /* 4. Adjust Floating Buttons so they don't block content */
+    .testimonials-title { font-size: 28px; }
+
     .float-btn {
         width: 42px;
         height: 42px;
         font-size: 16px;
     }
     
-    /* Keep the AI bot slightly larger than other buttons for emphasis */
     .ai-bot-btn {
         width: 55px !important;
         height: 55px !important;
         margin-top: 5px;
     }
     
-    /* 5. Ensure Top Bar contact info stacks neatly */
     .top-contact {
         display: flex;
         flex-direction: column;
         gap: 5px;
         margin-top: 8px;
     }
-    .top-contact a {
-        margin: 0;
-    }
-}
-
-/* Adjustments for Tablets */
-@media (max-width: 992px) {
-    /* Ensure the chat widget doesn't overlap centered content too much */
-    .ai-chat-container {
-        bottom: 100px;
-    }
+    .top-contact a { margin: 0; }
 }
